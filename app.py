@@ -1,11 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
 
+with open("storage/posts.json", "r") as posts_file:
+    blog_posts = json.load(posts_file)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def index():
+    #code comes here
+    return render_template('index.html', posts=blog_posts)
 
 
 if __name__ == '__main__':
