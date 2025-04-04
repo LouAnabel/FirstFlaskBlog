@@ -2,6 +2,8 @@
 
 This is a simple blog application built using Flask, where users can add, update, and delete blog posts. The posts are stored in a JSON file.
 
+![Alt text for the image](/Users/louisedebatin/GitHub/FirstFlaskBlog/pictureofapp.png)
+
 ## Features
 - View all blog posts on the homepage
 - Add new blog posts
