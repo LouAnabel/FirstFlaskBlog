@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Add Your Post</title>
-    </head>
-    <body>
-        <h1>Add a new post:</h1>
-        <form action="{{ url_for('add') }}" method="POST" >
-            <label for="author">Author name:</label><br>
-            <input type="text" id="author" name="author"><br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='add.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Add a New Post</h1>
+        </header>
+        <main>
+            <form action="{{ url_for('add') }}" method="POST" class="post-form">
+                {% if error %}
+                    <div class="error-message">{{ error }}</div>
+                {% endif %}
 
-            <label for="title">Title:</label><br>
-            <input type="text" id="title" name="title"><br>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" placeholder="Your name">
+                </div>
 
-            <label for="content">Post:</label><br>
-            <textarea id="content" name="content" rows="10"></textarea><br>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Post title">
+                </div>
 
-            <input type="submit" value="Submit">
-        </form>
-        <a href="/" class="back-link">Back to all posts</a>
-    </body>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" rows="10" placeholder="Write your post here..."></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="submit-button">Publish Post</button>
+                    <a href="{{ url_for('index') }}" class="cancel-button">Cancel</a>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
 </html>
