@@ -1,4 +1,14 @@
 [
-  {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-  {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}
+  {
+    "id": 2,
+    "author": "Jane Doe",
+    "title": "My favorite Post",
+    "content": "This is my favorite post that I just updated!"
+  },
+  {
+    "id": 3,
+    "author": "Louise",
+    "title": "Done!",
+    "content": "It works!"
+  }
 ]

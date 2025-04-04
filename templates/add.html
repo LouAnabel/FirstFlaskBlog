@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Your Post</title>
+    </head>
+    <body>
+        <h1>Add a new post:</h1>
+        <form action="{{ url_for('add') }}" method="POST" >
+            <label for="author">Author name:</label><br>
+            <input type="text" id="author" name="author"><br>
+
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+
+            <label for="content">Post:</label><br>
+            <textarea id="content" name="content" rows="10"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <a href="/" class="back-link">Back to all posts</a>
+    </body>
+</html>
